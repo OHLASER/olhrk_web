@@ -289,19 +289,23 @@
             }
             if (dt !== 'undefined') {
                 setFileData(dt.files[0]);
+                e.preventDefault();
             }
+            
         };
 
         var dragOverHandler = function (e, elm) {
             e.preventDefault();
             e.stopPropagation();
             $(elm).addClass('dragging');
+            return false;
         };
 
         var dragLeaveHandler = function (e, elm) {
             e.preventDefault();
             e.stopPropagation();
             $(elm).removeClass('dragging');
+            return false;
         };
 
         var changeHandler = function (e) {
