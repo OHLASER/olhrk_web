@@ -105,14 +105,20 @@ namespace olhrk_web.Controllers
                 JavaScriptSerializer ser;
                 ser = new JavaScriptSerializer();
                 string strProcData;
-                strProcData = ser.Serialize(procData);
-                
-                byte[] data;
-                data = System.Text.Encoding.UTF8.GetBytes(strProcData);
-
-                if (DataLink.LoadData(data, procData.data_name))
+                try
                 {
-                    oldlclr.Error.SetError(oldlclr.ErrorCode.NO_ERROR);
+                    strProcData = ser.Serialize(procData);
+                    byte[] data;
+                    data = System.Text.Encoding.UTF8.GetBytes(strProcData);
+
+                    if (DataLink.LoadData(data, procData.data_name))
+                    {
+                        oldlclr.Error.SetError(oldlclr.ErrorCode.NO_ERROR);
+                    }
+                }
+                catch (InvalidOperationException ex)    // for having data length over ser.MaxJsonLength
+                {
+                    oldlclr.Error.SetError(oldlclr.ErrorCode.UNEXPECTED_STATUS);
                 }
             }
             else
