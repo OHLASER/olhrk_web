@@ -46,7 +46,7 @@ namespace olhrk_web.Controllers
         public ActionResult Status()
         {
 
-
+            
             oldlclr.Status status;
             status = null;
             if (DataLink.Connect())

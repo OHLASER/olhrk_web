@@ -260,6 +260,18 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="..\Release\json_builder.dll">
+      <Link>json_builder.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Release\json_parser.dll">
+      <Link>json_parser.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Release\oldl.dll">
+      <Link>oldl.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -430,6 +442,10 @@
   <PropertyGroup>
     <PostBuildEvent>call $(ProjectDir)module_copy.bat \$(OutDir) $(ConfigurationName)
 </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
