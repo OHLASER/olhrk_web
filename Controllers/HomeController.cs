@@ -104,6 +104,7 @@ namespace olhrk_web.Controllers
 
                 JavaScriptSerializer ser;
                 ser = new JavaScriptSerializer();
+                ser.MaxJsonLength = 0xffffff;   // 16MB
                 string strProcData;
                 try
                 {
