@@ -1,4 +1,7 @@
+# olhrk_olhrk_web
 olhrk_webはC#で記述された ASP.NET Webアプリケーションです。HARUKAの遠隔操作が可能です。
+HARUKAが動作しているWindowsでIISを起動して使用します。httpプロトコルを通じて、HARUKAの状態取得、データ転送を行うことができます。
+※このリポジトリ単体をクローンしても使用できません。[olexttool](https://github.com/OHLASER/olexttool) からサブモジュールとして本リポジトリを取得してください。
 
 ## IISの設定
 olhrk_webを使用する際、IISの設定についての注意点を記載します。
@@ -14,8 +17,9 @@ olhrk_webを使用するサイトに紐づくアプリケーションプール�
 
 ### Windowsの機能
 IISに関するwindowsの機能の設定について、以下のような設定で動作を確認しています。
-<img src="docs/iis_settings01.PNG" alt="windowsの機能">
+<br>
+<img src="docs/iis_settings01.PNG" alt="windowsの機能" width="400px">
 
 
 ### その他
-IPアドレス、ポートの設定は任意の値で問題ありません。
+IPアドレス、ポートの設定値については、HARUKAはそれらを参照しないため任意の値で問題ありません。
