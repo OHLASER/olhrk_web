@@ -9,11 +9,12 @@ olhrk_webを使用するサイトに紐づくアプリケーションプール�
 | ---- | ---- |
 |  32ビットアプリケーションの有効化  | True  |
 |  ID  | LocalSystem  |
+
 ![iis_settings00](docs/iis_settings00.PNG)
 
 ### Windowsの機能
 IISに関するwindowsの機能の設定について、以下のような設定で動作を確認しています。
-![iis_settings00](docs/iis_settings01.PNG)
+<img src="docs/iis_settings01.PNG" alt="windowsの機能">
 
 
 ### その他
