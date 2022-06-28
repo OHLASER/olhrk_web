@@ -1,4 +1,4 @@
-# olhrk_olhrk_web
+# HARUKA外部操作Webアプリケーション
 olhrk_webはC#で記述された ASP.NET Webアプリケーションです。HARUKAに対して状態取得、加工データの準備といった操作を遠隔PCから行えます。
 HARUKAが動作しているWindowsでIISを起動して使用します。httpプロトコルを通じて、HARUKAの状態取得、データ転送を行うことができます。
 ※このリポジトリ単体をクローンしても使用できません。[olexttool](https://github.com/OHLASER/olexttool) からサブモジュールとして本リポジトリを取得してください。
