@@ -281,8 +281,10 @@
         if (file) {
             dropTarget.data('file', file.name);
             nameFileContainer[file.name] = file;
+            $('.selected-file-name-disp').text(file.name)
         } else {
             dropTarget.removeData('file');
+            $('.selected-file-name-disp').text('')
         }
 
         syncUiWithFileData();
