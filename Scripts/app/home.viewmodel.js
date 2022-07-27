@@ -3,16 +3,26 @@
     self.myHometown = ko.observable("");
 
     var setLpStatusUI = function (param) {
-        
-        if (param.finished_time_of_processing) {
-            $('#processed-time').text(param.finished_time_of_processing);
+
+        if (param.started_time_of_processing) {
+            $('#processing-time-st').text(param.started_time_of_processing);
         } else {
-            $('#processed-time').text('');
+            $('#processing-time-st').text('');
+        }
+        if (param.started_time_of_loading) {
+            $('#loading-time-st').text(param.started_time_of_loading);
+        } else {
+            $('#loading-time-st').text('');
+        }
+        if (param.finished_time_of_processing) {
+            $('#processing-time-fh').text(param.finished_time_of_processing);
+        } else {
+            $('#processing-time-fh').text('');
         }
         if (param.finished_time_of_loading) {
-            $('#loaded-time').text(param.finished_time_of_loading);
+            $('#loading-time-fh').text(param.finished_time_of_loading);
         } else {
-            $('#loaded-time').text('');
+            $('#loading-time-fh').text('');
         }
         if (typeof (param.processed_count) !== 'undefined') {
             $('#proc-count').text(param.processed_count);
