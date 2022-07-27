@@ -4,16 +4,16 @@
 
     var setLpStatusUI = function (param) {
 
-        if (param.started_time_of_processing) {
-            $('#processing-time-st').text(param.started_time_of_processing);
-        } else {
-            $('#processing-time-st').text('');
-        }
-        if (param.started_time_of_loading) {
-            $('#loading-time-st').text(param.started_time_of_loading);
-        } else {
-            $('#loading-time-st').text('');
-        }
+        //if (param.started_time_of_processing) {
+        //    $('#processing-time-st').text(param.started_time_of_processing);
+        //} else {
+        //    $('#processing-time-st').text('');
+        //}
+        //if (param.started_time_of_loading) {
+        //    $('#loading-time-st').text(param.started_time_of_loading);
+        //} else {
+        //    $('#loading-time-st').text('');
+        //}
         if (param.finished_time_of_processing) {
             $('#processing-time-fh').text(param.finished_time_of_processing);
         } else {
@@ -30,7 +30,19 @@
             $('#proc-count').text('');
         }
         if (typeof (param.status) !== 'undefined') {
-            $('#status').text(param.status);
+            let status_str = 'Undefined'
+            switch (Number(param.status)) {
+                case 0:
+                    status_str = 'Idle'
+                    break
+                case 1:
+                    status_str = 'Processing'
+                    break
+                case 2:
+                    status_str = 'Loading'
+                    break
+            }
+            $('#status').text(status_str);
         } else {
             $('#status').text('');
         }
