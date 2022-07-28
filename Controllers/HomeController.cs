@@ -121,6 +121,8 @@ namespace olhrk_web.Controllers
                 {
                     oldlclr.Error.SetError(oldlclr.ErrorCode.UNEXPECTED_STATUS);
                 }
+
+                DataLink.Disconnect();
             }
             else
             {
