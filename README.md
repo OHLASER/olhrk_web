@@ -4,22 +4,14 @@ HARUKAが動作しているWindowsでIISを起動して使用します。httpプ
 ※このリポジトリ単体をクローンしても使用できません。[olexttool](https://github.com/OHLASER/olexttool) からサブモジュールとして本リポジトリを取得してください。
 
 ## IISの設定
-olhrk_webを使用する際、IISの設定についての注意点を記載します。
-
-### IISマネージャ
-olhrk_webを使用するサイトに紐づくアプリケーションプールの詳細設定画面上で、以下のように項目設定が行われている必要があります。
-|  項目  |  説明  |
-| ---- | ---- |
-|  32ビットアプリケーションの有効化  | True  |
-|  ID  | LocalSystem  |
-
-![iis_settings00](docs/iis_settings00.PNG)
+olhrk_webを使用する際に必要な、IISの各種設定について記載します。
 
 ### Windowsの機能
-IISに関するwindowsの機能の設定について、以下のような設定で動作を確認しています。
+<!--IISに関するwindowsの機能の設定について、以下のような設定で動作を確認しています。<br>
 <br>
-<img src="docs/iis_settings01.PNG" alt="windowsの機能" width="400px">
-各種機能はinstall_iis.ps1を実行することで一括で有効化できます。有効化される機能は以下の通りです。
+<img src="docs/iis_settings01.PNG" alt="windowsの機能" width="400px"><br-->
+本アプリの動作にはIISのインストールが必要になります。
+必要となるWindowsの各種機能はinstall_iis.ps1を実行することで一括で有効化できます。有効化される機能は以下の通りです。
 - IIS-ManagementConsole`
 - IIS-ManagementService`
 - IIS-ManagementScriptingTools`
@@ -34,6 +26,16 @@ IISに関するwindowsの機能の設定について、以下のような設定�
 - IIS-HttpErrors`
 - IIS-StaticContent`
 - IIS-RequestFiltering
+<img src="docs/iis_settings01.PNG" alt="windowsの機能" width="300px"><br>
+
+### IISマネージャ
+olhrk_webを使用するサイトに紐づくアプリケーションプールの詳細設定画面上で、以下のように項目設定が行われている必要があります。
+|  項目  |  説明  |
+| ---- | ---- |
+|  32ビットアプリケーションの有効化  | True  |
+|  ID  | LocalSystem  |
+
+![iis_settings00](docs/iis_settings00.PNG)
 
 
 ### その他
