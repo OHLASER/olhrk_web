@@ -17,9 +17,23 @@ olhrk_webを使用するサイトに紐づくアプリケーションプール�
 
 ### Windowsの機能
 IISに関するwindowsの機能の設定について、以下のような設定で動作を確認しています。
-各種機能はinstall_iis.ps1を実行することで一括で有効化できます。
 <br>
 <img src="docs/iis_settings01.PNG" alt="windowsの機能" width="400px">
+各種機能はinstall_iis.ps1を実行することで一括で有効化できます。有効化される機能は以下の通りです。
+- IIS-ManagementConsole`
+- IIS-ManagementService`
+- IIS-ManagementScriptingTools`
+- IIS-NetFxExtensibility45`
+- IIS-ASP`
+- IIS-ASPNET45`
+- IIS-CGI`
+- IIS-ISAPIExtensions`
+- IIS-ISAPIFilter`
+- IIS-DefaultDocument`
+- IIS-DirectoryBrowsing`
+- IIS-HttpErrors`
+- IIS-StaticContent`
+- IIS-RequestFiltering
 
 
 ### その他
