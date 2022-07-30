@@ -12,20 +12,21 @@ olhrk_webを使用する際に必要な、IISの各種設定について記載�
 <img src="docs/iis_settings01.PNG" alt="windowsの機能" width="400px"><br-->
 本アプリの動作にはIISのインストールが必要になります。
 必要となるWindowsの各種機能はinstall_iis.ps1を実行することで一括で有効化できます。有効化される機能は以下の通りです。
-- IIS-ManagementConsole`
-- IIS-ManagementService`
-- IIS-ManagementScriptingTools`
-- IIS-NetFxExtensibility45`
-- IIS-ASP`
-- IIS-ASPNET45`
-- IIS-CGI`
-- IIS-ISAPIExtensions`
-- IIS-ISAPIFilter`
-- IIS-DefaultDocument`
-- IIS-DirectoryBrowsing`
-- IIS-HttpErrors`
-- IIS-StaticContent`
+- IIS-ManagementConsole
+- IIS-ManagementService
+- IIS-ManagementScriptingTools
+- IIS-NetFxExtensibility45
+- IIS-ASP
+- IIS-ASPNET45
+- IIS-CGI
+- IIS-ISAPIExtensions
+- IIS-ISAPIFilter
+- IIS-DefaultDocument
+- IIS-DirectoryBrowsing
+- IIS-HttpErrors
+- IIS-StaticContent
 - IIS-RequestFiltering
+<br>
 <img src="docs/iis_settings01.PNG" alt="windowsの機能" width="300px"><br>
 
 ### IISマネージャ
